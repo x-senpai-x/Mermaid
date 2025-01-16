@@ -84,8 +84,9 @@ graph TD
     E --> F[Commit]
     F --> G[Push]
 
-### Bug Report Flow
 ```
+### Bug Report Flow
+
 ```mermaid
 graph LR
     A[Bug Found] --> B{Reproducible?}
