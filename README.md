@@ -1,100 +1,149 @@
-# Basic Flowchart
 ```mermaid
-graph TD
-    subgraph Output
-        O11[Output 1,1]
-        O12[Output 1,2]
-        O13[Output 1,3]
-        O14[Output 1,4]
-        O21[Output 2,1]
-        O22[Output 2,2]
-        O23[Output 2,3]
-        O24[Output 2,4]
-        O31[Output 3,1]
-        O32[Output 3,2]
-        O33[Output 3,3]
-        O34[Output 3,4]
-        O41[Output 4,1]
-        O42[Output 4,2]
-        O43[Output 4,3]
-        O44[Output 4,4]
-    end
+flowchart TD
+    classDef challenge fill:#e6f3ff,stroke:#2d7de6
+    classDef impact fill:#fff0f3,stroke:#e63946
+    classDef solution fill:#e6ffe6,stroke:#2d8659
 
-    subgraph AdditionLayer2
-        A111["+"]
-        A112["+"]
-        A113["+"]
-        A114["+"]
-        A121["+"]
-        A122["+"]
-        A123["+"]
-        A124["+"]
-        A131["+"]
-        A132["+"]
-        A133["+"]
-        A134["+"]
-        A141["+"]
-        A142["+"]
-        A143["+"]
-        A144["+"]
-    end
+    A[TURBULENCE AHEAD:<br>IndiGo's Financial Setbacks]
 
-    subgraph AdditionLayer1
-        A211["+"]
-        A212["+"]
-        A213["+"]
-        A214["+"]
-        A221["+"]
-        A222["+"]
-        A223["+"]
-        A224["+"]
-        A231["+"]
-        A232["+"]
-        A233["+"]
-        A234["+"]
-        A241["+"]
-        A242["+"]
-        A243["+"]
-        A244["+"]
-    end
+    %% Branch 1: Operational Challenges
+    A --> B[Operational Challenges]
+    B --> B1[ATF Cost Rise]
+    B --> B2[Non-Reliable GTF Engines]
+    
+    B1 --> B1A[Geopolitical factors<br>Russia-Ukraine conflict]
+    B1A --> B1B[ATF: 40-50% operational expenses<br>20% YoY surge in fuel prices<br>Fuel costs exceed ₹7,000 crore]
+    
+    B2 --> B2A[Grounding of Over 70 Aircraft]
+    B2A --> B2B[15% fleet grounded<br>Reduced flight capacity<br>₹1,200 crore replacement cost]
 
-    subgraph MultiplicationGates
-        M111["A1,1 × B1,1"]
-        M112["A1,1 × B1,2"]
-        M113["A1,1 × B1,3"]
-        M114["A1,1 × B1,4"]
-        M121["A1,2 × B2,1"]
-        M122["A1,2 × B2,2"]
-        M123["A1,2 × B2,3"]
-        M124["A1,2 × B2,4"]
-        M131["A1,3 × B3,1"]
-        M132["A1,3 × B3,2"]
-        M133["A1,3 × B3,3"]
-        M134["A1,3 × B3,4"]
-        M141["A1,4 × B4,1"]
-        M142["A1,4 × B4,2"]
-        M143["A1,4 × B4,3"]
-        M144["A1,4 × B4,4"]
-    end
+    %% Branch 2: Financial Challenges
+    A --> C[Financial Challenges]
+    C --> C1[High Lease and Maintenance Cost]
+    C --> C2[Higher Dollar Denominated Cost]
+    
+    C1 --> C1A[Increased fixed costs<br>20-22% hike in leasing rates]
+    C1A --> C1B[80% leased aircraft<br>Higher ticket prices<br>Reduced service quality]
+    
+    C2 --> C2A[4% depreciation of INR vs USD]
+    C2A --> C2B[$1.3B annual payments<br>₹500 crore forex loss]
 
-    %% Connections for first row outputs
-    M111 & M121 --> A211
-    M131 & M141 --> A212
-    A211 & A212 --> A111 --> O11
+    %% Branch 3: Revenue Challenges
+    A --> D[Revenue Challenges]
+    D --> D1[Less Revenue Growth]
+    D --> D2[Market Share Pressure]
+    
+    D1 --> D1A[Increased operational costs<br>outpace revenue growth]
+    D1A --> D1B[2.8% growth in RASK<br>Stagnant passenger yields at ₹4.5/km]
+    
+    D2 --> D2A[Competitive Market Dynamics]
+    D2A --> D2B[Limited route expansion<br>Reduced flight frequency<br>Lower capacity utilization]
 
-    M112 & M122 --> A213
-    M132 & M142 --> A214
-    A213 & A214 --> A112 --> O12
+    %% Branch 4: Regulatory Challenges
+    A --> E[Regulatory Challenges]
+    E --> E1[Aviation Sector Policies]
+    E --> E2[Environmental Compliance]
+    
+    E1 --> E1A[Increased tax burden<br>on ATF and operations]
+    E1A --> E1B[Reduced cost competitiveness<br>Higher operating costs]
+    
+    E2 --> E2A[Strict carbon emission regulations]
+    E2A --> E2B[Higher compliance costs<br>Investments in green technology<br>Risk of penalties]
 
-    M113 & M123 --> A215
-    M133 & M143 --> A216
-    A215 & A216 --> A113 --> O13
+    %% Solutions Layer
+    B1B & B2B --> S1[Operational Solutions]
+    S1 --> S1A[Fuel Hedging Program<br>Fleet Maintenance Optimization<br>Target: 15-20% cost reduction]
 
-    M114 & M124 --> A217
-    M134 & M144 --> A218
-    A217 & A218 --> A114 --> O14
+    C1B & C2B --> S2[Financial Solutions]
+    S2 --> S2A[Lease Restructuring<br>Currency Risk Management<br>Target: 10-15% cost saving]
 
-    %% Note: Only showing first row for clarity
-    %% Similar connections exist for other rows
+    D1B & D2B --> S3[Growth Solutions]
+    S3 --> S3A[Route Optimization<br>Yield Management<br>Target: 10% revenue growth]
+
+    E1B & E2B --> S4[Regulatory Solutions]
+    S4 --> S4A[Lobbying for policy reforms<br>Investments in sustainable technology<br>Target: 10% compliance cost saving]
+
+    class A challenge
+    class B,C,D,E challenge
+    class B1,B2,C1,C2,D1,D2,E1,E2 challenge
+    class B1A,B2A,C1A,C2A,D1A,D2A,E1A,E2A impact
+    class B1B,B2B,C1B,C2B,D1B,D2B,E1B,E2B impact
+    class S1,S2,S3,S4 solution
+    class S1A,S2A,S3A,S4A solution
 ```
+
+```mermaid
+flowchart TD
+    classDef challenge fill:#164080,stroke:#d2edff,color:#d2edff
+    classDef impact fill:#d2edff,stroke:#164080,color:#164080
+    classDef solution fill:#d2edff,stroke:#164080,color:#164080,font-weight:bold
+
+    A[TURBULENCE AHEAD:<br>IndiGo's Financial Setbacks]
+
+    %% Branch 1: Operational Challenges
+    A --> B[Operational Challenges]
+    B --> B1[ATF Cost Rise]
+    B --> B2[Non-Reliable GTF Engines]
+    
+    B1 --> B1A[Geopolitical factors<br>Russia-Ukraine conflict]
+    B1A --> B1B[ATF: 40-50% operational expenses<br>20% YoY surge in fuel prices<br>Fuel costs exceed ₹7,000 crore]
+    
+    B2 --> B2A[Grounding of Over 70 Aircraft]
+    B2A --> B2B[15% fleet grounded<br>Reduced flight capacity<br>₹1,200 crore replacement cost]
+
+    %% Branch 2: Financial Challenges
+    A --> C[Financial Challenges]
+    C --> C1[High Lease and Maintenance Cost]
+    C --> C2[Higher Dollar Denominated Cost]
+    
+    C1 --> C1A[Increased fixed costs<br>20-22% hike in leasing rates]
+    C1A --> C1B[80% leased aircraft<br>Higher ticket prices<br>Reduced service quality]
+    
+    C2 --> C2A[4% depreciation of INR vs USD]
+    C2A --> C2B[$1.3B annual payments<br>₹500 crore forex loss]
+
+    %% Branch 3: Revenue Challenges
+    A --> D[Revenue Challenges]
+    D --> D1[Less Revenue Growth]
+    D --> D2[Market Share Pressure]
+    
+    D1 --> D1A[Increased operational costs<br>outpace revenue growth]
+    D1A --> D1B[2.8% growth in RASK<br>Stagnant passenger yields at ₹4.5/km]
+    
+    D2 --> D2A[Competitive Market Dynamics]
+    D2A --> D2B[Limited route expansion<br>Reduced flight frequency<br>Lower capacity utilization]
+
+    %% Branch 4: Regulatory Challenges
+    A --> E[Regulatory Challenges]
+    E --> E1[Aviation Sector Policies]
+    E --> E2[Environmental Compliance]
+    
+    E1 --> E1A[Increased tax burden<br>on ATF and operations]
+    E1A --> E1B[Reduced cost competitiveness<br>Higher operating costs]
+    
+    E2 --> E2A[Strict carbon emission regulations]
+    E2A --> E2B[Higher compliance costs<br>Investments in green technology<br>Risk of penalties]
+
+    %% Solutions Layer
+    B1B & B2B --> S1[Operational Solutions]
+    S1 --> S1A[Fuel Hedging Program<br>Fleet Maintenance Optimization<br>Target: 15-20% cost reduction]
+
+    C1B & C2B --> S2[Financial Solutions]
+    S2 --> S2A[Lease Restructuring<br>Currency Risk Management<br>Target: 10-15% cost saving]
+
+    D1B & D2B --> S3[Growth Solutions]
+    S3 --> S3A[Route Optimization<br>Yield Management<br>Target: 10% revenue growth]
+
+    E1B & E2B --> S4[Regulatory Solutions]
+    S4 --> S4A[Lobbying for policy reforms<br>Investments in sustainable technology<br>Target: 10% compliance cost saving]
+
+    class A challenge
+    class B,C,D,E challenge
+    class B1,B2,C1,C2,D1,D2,E1,E2 challenge
+    class B1A,B2A,C1A,C2A,D1A,D2A,E1A,E2A impact
+    class B1B,B2B,C1B,C2B,D1B,D2B,E1B,E2B impact
+    class S1,S2,S3,S4 solution
+    class S1A,S2A,S3A,S4A solution
+```
+
 
