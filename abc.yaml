@@ -1,0 +1,21 @@
+
+✅ This will render the full Mermaid diagram on GitHub.com  
+🚫 It **won’t render** in tools like VS Code unless you install a Mermaid plugin.
+
+---
+
+### ⚙️ For local preview:
+
+If you want to preview Mermaid diagrams **locally**, here are your options:
+
+- **VS Code + Markdown Preview Mermaid Support extension**  
+  [Install here](https://marketplace.visualstudio.com/items?itemName=vstirbu.vscode-mermaid-preview)
+
+- **Use a Markdown previewer that supports Mermaid**, like:
+  - [Obsidian](https://obsidian.md/)
+  - [Marktext](https://marktext.app/)
+  - [Zettlr](https://www.zettlr.com/)
+
+---
+
+Want me to polish that section and write a GitHub-ready `README.md` block for you?
